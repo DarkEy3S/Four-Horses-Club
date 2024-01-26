@@ -16,22 +16,22 @@ export const path = {
     },
     src: {
 
-        js: `${srcFolder}/js/app.js`,
-        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-        svg: `${srcFolder}/img/**/*.svg`,
-        scss: `${srcFolder}/scss/style.scss`,
+        js: `${srcFolder}/assets/js/app.js`,
+        images: `${srcFolder}/assets/images/content/**/*.{jpg,jpeg,png,gif,webp}`,
+        svg: `${srcFolder}/assets/images/svg/**/*.svg`,
+        scss: `${srcFolder}/assets/scss/style.scss`,
         html: `${srcFolder}/*.pug`, //.html
         files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/svg/*.svg`
+        svgicons: `${srcFolder}/assets/images/svg/*.svg`
     },
     watch: {
 
-        js: `${srcFolder}/js/**/*.js`,
-        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
-        scss: `${srcFolder}/scss/**/*.scss`,
+        js: `${srcFolder}/assets/js/**/*.js`,
+        images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+        scss: `${srcFolder}/assets/scss/**/*.scss`,
         html: `${srcFolder}/**/*.pug`,//.html
         files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/svg/*.svg`
+        svgicons: `${srcFolder}/assets/images/svg/*.svg`
     },
     clean: buildFolder,
     buildFolder: buildFolder,

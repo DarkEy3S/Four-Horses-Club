@@ -1,6 +1,6 @@
-import fileinclude from 'gulp-file-include';
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
-import versionNumber from 'gulp-version-number';
+import fileinclude from 'gulp-file-include'
+import webpHtmlNosvg from 'gulp-webp-html-nosvg'
+import versionNumber from 'gulp-version-number'
 import pug from "gulp-pug"
 
 export const html = () => {
@@ -20,11 +20,9 @@ export const html = () => {
         .pipe(
             app.plugins.if(
                 app.isBuild,
-                webpHtmlNosvg()    
+                webpHtmlNosvg()
             )
         )
-        // .pipe(webpHtmlNosvg())
-
         .pipe(
             app.plugins.if(
                 app.isBuild,
@@ -44,23 +42,6 @@ export const html = () => {
                 })
             )
         )
-
-        // .pipe(
-        //     versionNumber({
-        //         'value': '%DT%',
-        //         'append': {
-        //             'key': '_v',
-        //             'cover': 0,
-        //             'to': [
-        //                 'css',
-        //                 'js',
-        //             ]
-        //         },
-        //         'output': {
-        //             'file': 'gulp/version.json'
-        //         }
-        //     })
-        // )
         .pipe(app.gulp.dest(app.path.build.html))
-        .pipe(app.plugins.browsersync.stream());
+        .pipe(app.plugins.browsersync.stream())
 }
