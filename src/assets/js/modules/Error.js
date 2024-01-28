@@ -1,10 +1,13 @@
 
-export const Error = (errorCode, errorCause) => {
+export const funError = () => {
 
-    const errorText = "Error: Unable to process the request. Please try again later. (Error code:"
+    const funErrorCode = (errorCode, errorCause) => {
+        const errorText = "Error: Unable to process the request. Please try again later. (Error code:"
 
-    if (errorCause != undefined) throw console.error(`${errorText} ${errorCode})
+        if (errorCause != undefined) throw console.error(`${errorText} ${errorCode})
 ${errorCause}`)
-    throw console.error(`${errorText} ${errorCode})`)
+        throw console.error(`${errorText} ${errorCode})`)
+    }
+
 }
 

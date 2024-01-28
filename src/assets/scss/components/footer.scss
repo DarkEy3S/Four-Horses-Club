@@ -1,0 +1,14 @@
+.footer {
+	// .footer__marquee
+	// .footer__text
+
+	background: #e9ded4;
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 150px;
+		font-size: 16px;
+		opacity: 0.6;
+	}
+}

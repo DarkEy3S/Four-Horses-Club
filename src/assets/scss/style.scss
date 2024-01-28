@@ -1,6 +1,13 @@
-// @import 'fonts';
-@import 'resetstyle';
+@import 'global/mixin';
+@import 'global/color';
+@import 'global/fonts';
+@import 'global/marking';
+@import 'global/resetstyle';
+@import 'global/bottom';
+@import 'global/text';
 
-.body {
-	background-color: rgb(74, 74, 74);
-}
+@import 'global/marquee';
+@import 'components/header';
+@import 'components/lecture';
+@import 'components/bendra';
+@import 'components/footer';

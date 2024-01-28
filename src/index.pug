@@ -1,15 +1,16 @@
-- var title = "JS";
-- var description = "Test description";
-- var keywords = "Test keywords";
-
+- var title = "Клуб четырех коней";
+- var description = "ПРЕВРАТИТЕ УЕЗДНЫЙ ГОРОД В СТОЛИЦУ ЗЕМНОГО ШАРА";
+- var keywords = "Шахматы, Клуб четырех коней, О. Бендра";
+- var keywords = "Шахматы, Клуб четырех коней, О. Бендра";
+- var favicon = "@svg/horse.svg"
 include templates/components/head
 
 body.body 
-
-    include templates/components/header
-
-    main.main 
-        
-          
-    include templates/components/footer
-
+    .wrapper
+        main.main 
+            include templates/components/header
+            include templates/components/lecture
+            include templates/components/bendra
+            include templates/components/part
+        include templates/components/footer
+script(src="@js/app.min.js") 

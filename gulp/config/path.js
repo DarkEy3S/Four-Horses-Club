@@ -8,7 +8,8 @@ export const path = {
     build: {
 
         js: `${buildFolder}/js/`,
-        images: `${buildFolder}/img/`,
+        images: `${buildFolder}/images/content`,
+        svg: `${buildFolder}/images/svg`,
         fonts: `${buildFolder}/fonts/`,
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
@@ -17,21 +18,19 @@ export const path = {
     src: {
 
         js: `${srcFolder}/assets/js/app.js`,
-        images: `${srcFolder}/assets/images/content/**/*.{jpg,jpeg,png,gif,webp}`,
+        images: `${srcFolder}/assets/images/content/**/*.{jpg,jpeg,png,gif,webp,ico}`,
         svg: `${srcFolder}/assets/images/svg/**/*.svg`,
         scss: `${srcFolder}/assets/scss/style.scss`,
         html: `${srcFolder}/*.pug`, //.html
         files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/assets/images/svg/*.svg`
     },
     watch: {
 
         js: `${srcFolder}/assets/js/**/*.js`,
-        images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+        images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,svg, ico}`,
         scss: `${srcFolder}/assets/scss/**/*.scss`,
         html: `${srcFolder}/**/*.pug`,//.html
-        files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/assets/images/svg/*.svg`
+        files: `${srcFolder}/files/**/*.*`
     },
     clean: buildFolder,
     buildFolder: buildFolder,

@@ -19,11 +19,18 @@ export const scss = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
-        .pipe(app.plugins.reaplace(/@img\//g, '../img/'))
+
 
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+
+        .pipe(app.plugins.reaplace(/@img\//g, '../images/content/'))
+        .pipe(app.plugins.reaplace(/@svg\//g, '../images/svg/'))
+        .pipe(app.plugins.reaplace(/@js\//g, '../js/'))
+        .pipe(app.plugins.reaplace(/@scss\//g, '../css/'))
+        .pipe(app.plugins.reaplace(/@icons\//g, 'images/svg/icons'))
+
         .pipe(
             app.plugins.if(
                 app.isBuild,

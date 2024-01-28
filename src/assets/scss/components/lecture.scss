@@ -1,0 +1,44 @@
+.lecture {
+	margin: 0 0 91.65px;
+	@media (max-width: ($md3 + px)) {
+		margin: 0 0 81.78px;
+	}
+	// .lecture__row
+
+	&__row {
+		display: flex;
+		column-gap: 64px;
+		align-items: center;
+
+		@media (max-width: ($md3 + px)) {
+			flex-direction: column;
+			row-gap: 24px;
+		}
+	}
+
+	// .lecture__colum
+
+	&__colum {
+		&:first-child {
+			flex: 1 1 764px;
+			@media (max-width: ($md3 + px)) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	__visibility {
+	}
+
+	// .lecture__title
+
+	&__title {
+	}
+
+	// .lecture__image
+
+	&__image {
+		img {
+			border-radius: 50%;
+		}
+	}
+}

@@ -1,10 +1,34 @@
-header.nav 
+header.header 
     .container
-        .header__row 
-            .header__logo.logo.url.logo__url a(href="#") 
-                .logo__img img(src="@img/A3585A32-DB86-49B6-9.jpeg", alt="", srcset="")
-                .logo__img img(src="", alt="", srcset="")
-                .logo__img img(src="", alt="", srcset="")
+        .header__logo.logo 
+            .logo__row
+                img.logo__img(src="@svg/horse.svg", alt="horses", srcset="")
+                img.logo__img(src="@svg/horse.svg", alt="horses", srcset="")
+                img.logo__img(src="@svg/horse.svg", alt="horses", srcset="")
+                img.logo__img(src="@svg/horse.svg", alt="horses", srcset="")
                 .logo__text 
                     span клуб
                     span четырех конец
+        .header__main.main-header
+            .main-header__row
+                h1.main-header__title <p>Превратите <br> уездный  город </p><p>в столицу <br>земного шара</p>
+                h2.main-header__subtitle Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
+                .main-header__bottoms.bottoms-main-header
+                    a(href="#").bottoms-main-header__bottom.bottom.bottom-black 
+                        span Поддержать шахматную мысль
+                    a(href="#").bottoms-main-header__bottom.bottom.bottom-transparent 
+                        span Подробнее о турнире
+    .header__img.img-header
+        .img-header__row
+             
+            .img-header__sun.img-header__item
+            .img-header__city.img-header__item
+            .img-header__horses.img-header__item
+            .img-header__pawn.img-header__item
+            .img-header__king.img-header__item
+            .img-header__queen.img-header__item
+
+
+    .header__marquee
+        include marquee
+            
