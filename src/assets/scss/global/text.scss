@@ -1,5 +1,4 @@
 .title {
-	display: inline;
 	text-transform: uppercase;
 	color: $mainTextColor;
 	font-family: $titleFont;
@@ -20,6 +19,7 @@
 	h2 {
 		font-size: 54px;
 		font-weight: 400;
+		display: inline;
 	}
 	&__orange {
 		color: $redColor;
@@ -27,24 +27,48 @@
 }
 
 .subtitle {
-	display: inline;
-	p {
+	display: inline-block;
+	padding: 0 0 0 15px;
+	h4 {
 		display: inline;
 	}
 }
-
 .struckOutText {
 	position: relative;
 	display: inline-block;
 	overflow: visibility;
 	&::after {
 		content: '';
-		position: absolute;
+		position: relative;
 		left: 0;
-		top: 50%;
-		width: 62px;
+		width: 80px;
 		height: 2px;
 		background-color: $redColor;
 		display: block;
+		transform: translateY(-14px);
 	}
+}
+
+.blueText {
+	// .bender__feedback
+	@include adaptive-font(20, 18);
+	@media (min-width: ($mw + px)) {
+		font-size: 20px;
+	}
+	a {
+		color: $blueTextColor;
+		text-decoration: none;
+	}
+	h4 {
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		color: $blueTextColor;
+		font-family: $textFont;
+	}
+}
+
+::selection {
+	background: $bottomOrange;
+	color: $bottomBlack;
 }

@@ -1,7 +1,7 @@
 .header {
-	background: url('@img/header/header__bg.png'), rgb(224 209 197);
+	background: url('@img/header/header__bg.png'), $almondColor;
 	background-blend-mode: color-burn;
-
+	position: relative;
 	position: relative;
 	margin: 0 0 80px;
 	@media (max-width: ($md3 + px)) {
@@ -144,6 +144,17 @@
 		z-index: 1;
 		position: relative;
 		background-blend-mode: hard-light;
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: url('@svg/outline.svg') center bottom no-repeat;
+			position: absolute;
+			// display: block;
+			// z-index: 9;
+			top: 0;
+			left: -11px;
+		}
 	}
 	&__sun {
 		z-index: 0;

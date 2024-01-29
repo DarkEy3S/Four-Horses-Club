@@ -1,6 +1,8 @@
 .bendra {
-	// .bendra__row
-
+	margin: 0 0 165px;
+	@media (max-width: ($md3 + px)) {
+		margin: 0 0 120px;
+	}
 	&__row {
 		@include adaptive-font(16.651, 14.418);
 		@media (max-width: ($md2 + px)) {
@@ -28,6 +30,7 @@
 
 	&__title {
 		margin: 0 0 60px;
+
 		@media (max-width: ($md2 + px)) {
 			margin: 0 0 44px;
 		}
@@ -139,6 +142,8 @@
 	// .table-bendra__item
 
 	&__item {
+		font-size: 20px;
+
 		border-bottom: 2px solid $tableBorder;
 		padding: 16px;
 		&-name {
@@ -175,16 +180,6 @@
 				padding-left: 0;
 				padding-top: 0;
 			}
-		}
-	}
-}
-.bender {
-	// .bender__feedback
-
-	&__feedback {
-		a {
-			color: $blueTextColor;
-			text-decoration: none;
 		}
 	}
 }
