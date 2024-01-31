@@ -1,20 +1,34 @@
 .slider {
-	width: 500px;
-	height: 300px;
 	position: relative;
-	overflow: hidden;
+	width: 100%;
 	display: block;
-	&__item {
-		display: block;
+	&__content {
 		width: 100%;
-		height: 100%;
+		display: block;
+
+		position: relative;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
 		position: absolute;
-		top: 0;
-		left: 0;
+		width: 100%;
+
+		bottom: 0;
 		opacity: 0;
-		transition: opacity 0.5s ease;
+		transition: $animation;
+
 		&.active {
 			opacity: 1;
+			transform: translateX(0%);
+		}
+		@media (max-width: $md2) {
+			&-next {
+				transform: translateX(100%);
+			}
+			&-prev {
+				transform: translateX(-100%);
+			}
 		}
 	}
 }
@@ -22,7 +36,7 @@
 .controls {
 	position: relative;
 
-	bottom: -50px;
+	bottom: calc(-100% - 15px);
 
 	display: flex;
 	height: 50px;
@@ -45,18 +59,47 @@
 	transform: rotate(180deg);
 	flex: 0 0 44px;
 	margin: 0 10px 0 0;
+
+	&:hover {
+		background-color: $bottomOrange;
+	}
+	transition: $animation;
+	&.disable {
+		cursor: auto;
+		background-color: $sliderControlsColor;
+	}
 }
 
 .dots {
-	background: $bottomBlack;
+	flex: 0 0 auto;
+	height: 10px;
+	display: flex;
+	column-gap: 6px;
+}
+.dot {
+	background: $sliderControlsColor;
 	width: 10px;
 	flex: 0 0 10px;
 	height: 10px;
+	border-radius: 50%;
+	transition: $animation;
+	cursor: pointer;
+	&.active {
+		background-color: $bottomBlack;
+	}
 }
 
 .next {
 	flex: 0 0 44px;
 	background: url('@svg/slider/arrow.svg') $bottomBlack center center no-repeat;
 
+	transition: $animation;
+	&:hover {
+		background-color: $bottomOrange;
+	}
 	margin: 0 0 0 10px;
+	&.disable {
+		cursor: auto;
+		background-color: $sliderControlsColor;
+	}
 }

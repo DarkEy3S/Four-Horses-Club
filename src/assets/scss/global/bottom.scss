@@ -36,7 +36,7 @@
 		background-color: $bottomBlack;
 		color: white;
 		position: relative;
-		transition: ease-in-out 0.25s;
+		transition: $animation;
 		overflow: hidden;
 		&::before {
 			background-color: $bottomOrange;
@@ -49,10 +49,10 @@
 	}
 
 	position: relative;
-	transition: ease-in-out 0.25s;
+	transition: $animation;
 	overflow: hidden;
 	&::before {
-		transition: ease-in-out 0.25s;
+		transition: $animation;
 		display: inline-block;
 		content: '';
 		width: calc(100% + 20px);
