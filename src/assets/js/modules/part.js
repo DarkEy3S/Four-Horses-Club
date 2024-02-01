@@ -1,7 +1,7 @@
 export const part = () => {
-    const sliderItems = document.querySelectorAll('.slider__item')
-    const slider = document.querySelector('.slider')
-    const sliderContent = document.querySelector('.slider__content')
+    const sliderItems = document.querySelectorAll('.slider-part__item')
+    const slider = document.querySelector('.slider-part')
+    const sliderContent = document.querySelector('.slider-part__content')
     window.addEventListener('resize', (event) => {
         changeResult()
     })
@@ -12,25 +12,25 @@ export const part = () => {
 
     function changeResult() {
         const width = document.body.clientWidth
-        if (width >= 992) {
+        if (width > 972) {
 
             sliderItems.forEach(sliderItem => {
 
-                sliderItem.classList.remove('slider__item')
+                sliderItem.classList.remove('slider-part__item')
             })
             slider.classList.remove('slider')
-            sliderContent.classList.remove('slider__content')
+            sliderContent.classList.remove('slider-part__content')
         } else {
 
 
 
             sliderItems.forEach(sliderItem => {
 
-                sliderItem.classList.add('slider__item')
+                sliderItem.classList.add('slider-part__item')
             })
-            slider.classList.add('slider')
+            slider.classList.add('slider-part')
 
-            sliderContent.classList.add('slider__content')
+            sliderContent.classList.add('slider-part__content')
         }
     }
 

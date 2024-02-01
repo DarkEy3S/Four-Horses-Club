@@ -1,14 +1,29 @@
-$logoColor: #595653;
-$mainTextColor: #313131;
-$blueTextColor: #3057a2;
-$white: #fff;
-$redColor: #f54932;
-$almondColor: #e9ded4;
-$bottomBlack: #060606;
-$bottomBorderBlack: #303030;
-$bottomOrange: #fbce51;
-$sunYellow: #fbce51;
-$tableBorder: #d0d0d0;
-$sliderControlsColor: #d9d9d9;
+:root {
+	--color-logoColor: #595653;
+	--color-mainTextColor: #313131;
+	--color-blueTextColor: #3057a2;
+	--color-white: #fff;
+	--color-redColor: #f54932;
+	--color-almondColor: #e9ded4;
+	--color-bottomBlack: #060606;
+	--color-bottomBorderBlack: #303030;
+	--color-bottomOrange: #fbce51;
+	--color-sunYellow: #fbce51;
+	--color-tableBorder: #d0d0d0;
+	--color-sliderControlsColor: #d9d9d9;
+}
+
+$logoColor: var(--color-logoColor);
+$mainTextColor: var(--color-mainTextColor);
+$blueTextColor: var(--color-blueTextColor);
+$white: var(--color-white);
+$redColor: var(--color-redColor);
+$almondColor: var(--color-almondColor);
+$bottomBlack: var(--color-bottomBlack);
+$bottomBorderBlack: var(--color-bottomBorderBlack);
+$bottomOrange: var(--color-bottomOrange);
+$sunYellow: var(--color-sunYellow);
+$tableBorder: var(--color-tableBorder);
+$sliderControlsColor: var(--color-sliderControlsColor);
 
 $animation: ease-in-out 0.25s;

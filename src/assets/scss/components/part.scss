@@ -14,27 +14,12 @@
 		}
 	}
 
-	// .part__title
-
-	&__title {
-	}
-
-	// .part__subtitle
-
-	&__subtitle {
-	}
-
-	// .part__content
-
 	&__content {
 		.controls {
 			@media (min-width: ($md2 + px)) {
 				display: none;
 			}
 		}
-	}
-	&__content.slider {
-		// display: block;
 	}
 }
 .content-part {
@@ -53,15 +38,11 @@
 
 		// grid-template-rows:;
 		gap: 20px;
-		.slider {
-			&__content {
-			}
-		}
 	}
 }
 .content-part__item {
 	height: 100%;
-	&.slider__item {
+	&.slider-part__item {
 		position: absolute;
 		left: 0;
 		bottom: 0;

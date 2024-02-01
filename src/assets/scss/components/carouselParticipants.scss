@@ -1,0 +1,43 @@
+.carousel-participants {
+	position: relative;
+	&__wrappers {
+		overflow: hidden;
+	}
+	&__content {
+		position: relative;
+		left: 0%;
+		transition: $animation;
+		order: 1;
+		position: relative;
+		position: relative;
+		@media (max-width: ($md3 + px)) {
+			margin: 0 0 40px;
+		}
+		&:active {
+			cursor: grabbing;
+		}
+		user-select: none;
+	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.carousel__controls {
+		right: 0;
+		top: (-44px - 71px);
+		width: 155px;
+		height: 44px;
+		position: absolute;
+		@media (max-width: ($md3 + px)) {
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+	}
+	.dots.controls__item {
+		font-size: 16px;
+		height: 44px;
+		line-height: 44px;
+		cursor: auto;
+	}
+}

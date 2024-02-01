@@ -1,3 +1,45 @@
+.slider-part {
+	position: relative;
+	width: 100%;
+	display: block;
+	&__content {
+		width: 100%;
+		display: block;
+		cursor: grab;
+		position: relative;
+		&:active {
+			cursor: grabbing;
+		}
+	}
+	@media (max-width: ($md2 + px)) {
+		&__item {
+			user-select: none;
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			width: 100%;
+
+			bottom: 0;
+			opacity: 0;
+			transition: $animation;
+
+			&.active {
+				opacity: 1;
+				transform: translateX(0%);
+			}
+
+			&-next {
+				transform: translateX(100%);
+			}
+			&-prev {
+				transform: translateX(-100%);
+			}
+		}
+	}
+}
+.slider {
+}
+
 .controls {
 	position: relative;
 

@@ -5,8 +5,9 @@ import * as flsMarquee from "./modules/marquee.js"
 
 import * as  flsPart from "./modules/part.js"
 
+import * as  flsSliderPart from "./modules/sliderPart.js"
+import * as  flsCarouselParticipants from "./modules/carouselParticipants.js"
 
-import * as flsSliderPart from "./modules/silderPart.js"
 
 
 flsError.funError()
@@ -17,7 +18,4 @@ flsPart.part()
 
 
 flsSliderPart.sliderPart()
-
-
-
-
+flsCarouselParticipants.carousel()
